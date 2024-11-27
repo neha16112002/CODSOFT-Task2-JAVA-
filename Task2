@@ -6,26 +6,25 @@ public class StudentGradeCalculator {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Number of subjects
+        
         int numSubjects;
         System.out.print("Enter the number of subjects: ");
         numSubjects = scanner.nextInt();
 
-        // Array to store marks for each subject
         int[] marks = new int[numSubjects];
 
-        // Input marks for each subject
+        
         int totalMarks = 0;
         for (int i = 0; i < numSubjects; i++) {
             System.out.print("Enter marks obtained in subject " + (i + 1) + ": ");
             marks[i] = scanner.nextInt();
-            totalMarks += marks[i];  // Adding marks to total
+            totalMarks += marks[i];  
         }
 
-        // Calculate average percentage
+        
         double averagePercentage = (double) totalMarks / numSubjects;
 
-        // Grade Calculation based on average percentage
+        
         char grade;
         if (averagePercentage >= 90) {
             grade = 'A';
@@ -39,7 +38,7 @@ public class StudentGradeCalculator {
             grade = 'F';
         }
 
-        // Display Results
+      
         System.out.println("\nResults:");
         System.out.println("Total Marks: " + totalMarks + " / " + (100 * numSubjects));
         System.out.println("Average Percentage: " + averagePercentage + "%");
